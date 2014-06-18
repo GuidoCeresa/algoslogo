@@ -16,7 +16,7 @@ print('Algoslogo - creato (NON sovrascritto) LogoBootStrap')
 print('------------')
 
 // copy Readme into project
-sourceFile = "${pluginBasedir}/grails-app/Readme"
+sourceFile = "${pluginBasedir}/grails-app/readme"
 targetFile = "${basedir}/README-Logo"
 ant.copy(file: sourceFile, tofile: targetFile, overwrite: true)
 ant.delete(file: sourceFile)

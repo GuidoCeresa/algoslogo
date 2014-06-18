@@ -3,9 +3,9 @@
 //
 class AlgoslogoGrailsPlugin {
     // the plugin version
-    def version = "0.27"
+    def version = "0.28"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "2.4.0 > *"
+    def grailsVersion = "2.4.1 > *"
     // the other plugins this plugin depends on
     def dependsOn = [:]
     // resources that are excluded from plugin packaging
