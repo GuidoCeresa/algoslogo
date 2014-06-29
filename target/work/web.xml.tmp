@@ -5,7 +5,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
-    <display-name>/algoslogo-development-0.28</display-name>
+    <display-name>/algoslogo-development-0.29</display-name>
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -14,7 +14,7 @@
 
     <context-param>
         <param-name>webAppRootKey</param-name>
-        <param-value>algoslogo-development-0.28</param-value>
+        <param-value>algoslogo-development-0.29</param-value>
     </context-param>
 
     <filter>
