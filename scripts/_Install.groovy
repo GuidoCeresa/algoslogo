@@ -1,26 +1,43 @@
 /*
- * Main script to setup plugin on installation
+ * Main script to setup algoslogo on installation
  */
 
-def sourceFile
-def targetFile
+//--utilizza le special variables provided by Gant
+String source = "${pluginBasedir}"
+String dest = "${basedir}"
+source = dest + "/" + source + "/"
+dest = dest + "/"
+
+//--directory dell'applicazione
+String appDir = "grails-app/"
+String confDir = "${appDir}conf/"
+
+// copy readme into project
+moveFile(source, dest, "${appDir}README", "README-Logo")
+print('------------')
+print('Algoslogo - creato (o sovrascritto) README-Logo')
+print('------------')
 
 // copy LogoBootStrap into project
-sourceFile = "${pluginBasedir}/grails-app/conf/LogoBootStrap.groovy"
-targetFile = "${basedir}/grails-app/conf/LogoBootStrap.groovy"
-ant.copy(file: sourceFile, tofile: targetFile, overwrite: false)
-ant.delete(file: sourceFile)
-
+moveFile(source, dest, "${confDir}LogoBootStrap.groovy")
 print('------------')
 print('Algoslogo - creato (NON sovrascritto) LogoBootStrap')
 print('------------')
 
-// copy Readme into project
-sourceFile = "${pluginBasedir}/README"
-targetFile = "${basedir}/README-Logo"
-ant.copy(file: sourceFile, tofile: targetFile, overwrite: true)
-ant.delete(file: sourceFile)
+public static moveFile(String srcDirPath, String dstDirPath, String fileName) {
+    moveFile(srcDirPath, dstDirPath, fileName, fileName)
+} // fine del metodo
 
-print('------------')
-print('Algoslogo - creato (o sovrascritto) README-Logo')
-print('------------')
+public static moveFile(String srcDirPath, String dstDirPath, String srcFileName, String dstFileName) {
+    String srcFile = srcDirPath + srcFileName
+    String destFile = dstDirPath + dstFileName
+
+    copyFile(srcFile, destFile)
+} // fine del metodo
+
+public static copyFile(String srcFile, String destFile) {
+    new AntBuilder().copy(file: srcFile, tofile: destFile, overwrite: true)
+} // fine del metodo
+
+
+
