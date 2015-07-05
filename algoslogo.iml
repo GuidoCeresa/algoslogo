@@ -48,7 +48,7 @@
       <excludeFolder url="file://$MODULE_DIR$/target/work/scriptCache" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/tomcat" />
     </content>
-    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (algoslogo)">
@@ -111,8 +111,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="algoslogo-grailsPlugins" />
-    <orderEntry type="library" name="grails-2.4.1" level="application" />
     <orderEntry type="library" name="grails-2.4.2" level="application" />
   </component>
 </module>
-

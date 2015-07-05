@@ -1,7 +1,17 @@
 import it.algos.algoslogo.Evento
 import it.algos.algoslogo.EventoService
 
-class LogoBootStrap {
+/**
+ * Creato dal plugin AlgosLogo
+ *
+ * Classe di BootStrap in cui passa SEMPRE quando si lancia il programma
+ * Passa anche in tutte le altre classi col suffisso -BootStrap
+ *
+ * Questa classe viene creata (solo se non esiste già) quando si installa il plugin
+ * Viene cancellata quando si disinstalla il plugin
+ * Non viene modificata quando si esegue un upgrade del plugin
+ */
+public class LogoBootStrap {
 
     //--metodo invocato direttamente da Grails
     def init = { servletContext ->
