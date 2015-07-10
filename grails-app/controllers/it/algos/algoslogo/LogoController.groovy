@@ -10,7 +10,7 @@ class LogoController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 20, 100)
         respond Logo.list(params), model: [logoInstanceCount: Logo.count()]
     }
 
